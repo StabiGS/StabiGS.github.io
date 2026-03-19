@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Video Stabilization through Rendering-Aware Trajectory Optimization
+in 3DGS-Reconstructed Scenes">
+    <meta name="keywords" content="StabiGS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Stabilization through Rendering-Aware Trajectory Optimization
+in 3DGS-Reconstructed Scenes</title>
+
+    <link rel="icon" type="image/x-icon" href="static/images/android-chrome-512x512.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVDSP8EYWQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-FVDSP8EYWQ');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,600|Noto+Sans:400,600|Castoro:400,600"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons-outline.min.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script defer src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script defer src="./static/js/video-compare.js"></script>
+    <style>
+        .center-image {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .item {
+            margin: 10px;
+        }
+
+        .blend-img-background {
+            mix-blend-mode: multiply;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+ 
+        nav {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            width: 100%;
+            gap: 10px;
+        }
+
+        nav ul li {
+            flex: 1;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #00AEEF;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            min-height: 50px;
+            flex-grow: 1;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+
+        nav ul li a:hover {
+            background-color: #0090cc;
+            transform: scale(1.05);
+        }
+
+        nav ul li a:active {
+            background-color: #005DAC;
+            transform: scale(0.95);
+        }
+
+        nav ul li a.active {
+            background-color: #005DAC;
+            color: #ffffff;
+        }
+
+
+        .dynamic-section {
+            display: block;
+        }
+
+        .panel-style {
+            background-color: #fafafa;
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px auto 10px;
+            max-width: 100%;
+        }
+
+        .video-container {
+            position: relative;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .video-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+            align-items: center;
+        }
+
+        .video-label {
+            flex: 1;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .content-text {
+            max-width: 90%;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .math-formula {
+            max-width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #carousel-results {
+            visibility: hidden;
+        }
+
+        @media screen and (max-width: 768px) {
+            #compare-video, #compare-video-das3r, #compare-video-cut3r {
+                width: 100% !important;
+                height: 200px !important;
+            }
+            
+            #compare-description, #compare-description-das3r, #compare-description-cut3r {
+                height: auto !important;
+                min-height: auto !important;
+                max-height: none !important;
+                overflow: visible !important;
+            }
+            
+            .thumbnail {
+                width: 80px !important;
+            }
+        }
+        
+        @media screen and (min-width: 769px) {
+            #compare-video, #compare-video-das3r, #compare-video-cut3r {
+                width: 90% !important;
+                height: 500px !important;
+            }
+            
+            #compare-description, #compare-description-das3r, #compare-description-cut3r {
+                height: 60px !important;
+                overflow: auto !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero" style="margin-bottom: 0; padding-bottom: 0;">
+        <div class="hero-body" style="padding-bottom: 1rem;">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered" style="margin-bottom: 0">
+                    <div class="column is-max-desktop has-text-centered">
+                        <h1 class="title is-2 publication-title" style="margin-bottom:0rem; max-width: 85%; margin-left: auto; margin-right: auto;">
+                           <!-- <img src="./static/images/android-chrome-512x512.png" alt="ICON"
+                                style="max-width: 96px; vertical-align: middle;"> -->
+                            <strong>StabiGS:Video Stabilization through Rendering-Aware Trajectory Optimization
+in 3DGS-Reconstructed Scenes</strong>
+                        </h1>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths has-text-centered">
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="#">Author 1</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="author-block">
+                                <a href="#">Author 2</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Author 3</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Author 4</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                            <span class="author-block">
+                                <a href="#">Author 5</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Institution 1</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="author-block"><sup>2</sup>Institution 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero teaser">
+        <div class="container fluid">
+            <div class="hero-body is-max-widescreen">
+                <div class="columns is-centered">
+                    <div class="column is-centered is-two-thirds">
+                        <div class="notification is-centered is-info is-rounded"
+                            style="text-align: center; padding-bottom: 5px; padding-top: 5px; background-color: #005DAC; border-radius: 10px;">
+                            <h6 class="title is-2 publication-title" style="margin-bottom:0rem; text-align: center; color:#ffffff; font-size: 20px; margin-left: auto; margin-right: auto;">
+                                TL;DR: Full-frame video stabilization through global 3D scene reconstruction and rendering-aware trajectory optimization.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" style="background-color: transparent; padding-top: 2rem; padding-bottom: 2rem;">
+        <div align="center" class="container">
+            <div class="columns is-centered">
+                <div class="content">
+                    Design borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a> and <a href="https://github.com/Inception3D/Easi3R">Easi3R</a>.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
