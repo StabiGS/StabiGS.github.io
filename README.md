@@ -1,1 +1,1 @@
-# stabigs.github.io
+# StabiGS.github.io
