@@ -178,13 +178,21 @@ in 3DGS-Reconstructed Scenes</title>
             visibility: hidden;
         }
 
+        .dynamic-section .panel-style > div > div {
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
         @media screen and (max-width: 768px) {
-            #compare-video, #compare-video-das3r, #compare-video-cut3r {
+            #compare-video, #compare-video-stabigs, #compare-video-das3r, #compare-video-das3r-stabigs, #compare-video-cut3r, #compare-video-cut3r-stabigs, #compare-video-meshflow, #compare-video-meshflow-stabigs, #compare-video-fusta, #compare-video-fusta-stabigs, #compare-video-difrint, #compare-video-difrint-stabigs, #compare-video-gavs, #compare-video-gavs-stabigs {
                 width: 100% !important;
                 height: 200px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }
             
-            #compare-description, #compare-description-das3r, #compare-description-cut3r {
+            #compare-description, #compare-description-das3r, #compare-description-cut3r, #compare-description-meshflow, #compare-description-fusta, #compare-description-difrint, #compare-description-gavs {
                 height: auto !important;
                 min-height: auto !important;
                 max-height: none !important;
@@ -197,12 +205,14 @@ in 3DGS-Reconstructed Scenes</title>
         }
         
         @media screen and (min-width: 769px) {
-            #compare-video, #compare-video-das3r, #compare-video-cut3r {
-                width: 90% !important;
-                height: 500px !important;
+            #compare-video, #compare-video-stabigs, #compare-video-das3r, #compare-video-das3r-stabigs, #compare-video-cut3r, #compare-video-cut3r-stabigs, #compare-video-meshflow, #compare-video-meshflow-stabigs, #compare-video-fusta, #compare-video-fusta-stabigs, #compare-video-difrint, #compare-video-difrint-stabigs, #compare-video-gavs, #compare-video-gavs-stabigs {
+                width: 49% !important;
+                height: 400px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }
             
-            #compare-description, #compare-description-das3r, #compare-description-cut3r {
+            #compare-description, #compare-description-das3r, #compare-description-cut3r, #compare-description-meshflow, #compare-description-fusta, #compare-description-difrint, #compare-description-gavs {
                 height: 60px !important;
                 overflow: auto !important;
                 display: flex !important;
@@ -220,8 +230,6 @@ in 3DGS-Reconstructed Scenes</title>
                 <div class="columns is-centered" style="margin-bottom: 0">
                     <div class="column is-max-desktop has-text-centered">
                         <h1 class="title is-2 publication-title" style="margin-bottom:0rem; max-width: 85%; margin-left: auto; margin-right: auto;">
-                           <!-- <img src="./static/images/android-chrome-512x512.png" alt="ICON"
-                                style="max-width: 96px; vertical-align: middle;"> -->
                             <strong>StabiGS:Video Stabilization through Rendering-Aware Trajectory Optimization
 in 3DGS-Reconstructed Scenes</strong>
                         </h1>
@@ -231,31 +239,103 @@ in 3DGS-Reconstructed Scenes</strong>
                     <div class="column is-four-fifths has-text-centered">
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
-                                <a href="#">Author 1</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">Souheib Ben Mabrouk</a><sup>1,2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
                             <span class="author-block">
-                                <a href="#">Author 2</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="https://scholar.google.com/citations?user=zR1n_4QAAAAJ&hl=fr">Jean-Emmanuel Deschaud</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
                             </span>
                             <span class="author-block">
-                                <a href="#">Author 3</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">Eva Coupeté</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
                             </span>
                             <span class="author-block">
-                                <a href="#">Author 4</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">Thomas Derbanne</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
                             </span>
                             <span class="author-block">
-                                <a href="#">Author 5</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a href="#">Nicolas Rahmouni</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
                             </span>
                         </div>
 
                         <div class="is-size-5 publication-authors">
-                            <span class="author-block"><sup>1</sup>Institution 1</span>
+                            <span class="author-block"><sup>1</sup>Mines Paris PSL</span>
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <span class="author-block"><sup>2</sup>Institution 2</span>
+                            <span class="author-block"><sup>2</sup>GoPro</span>
                         </div>
+
+                        <br>
+                        <div class="columns is-centered" style="margin-bottom: 0em">
+                            <div class="column is-max-desktop has-text-centered">
+                               <!-- <h1 class="title is-4 publication-title" style="margin-bottom:0rem">-->
+                                    <h1 class="title is-4 publication-title" style="margin-bottom:0rem">
+                                        <strong>CVPR 2026 (Findings)</strong>
+                                    </h1>
+                                </h1>
+                            </div>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+
+                                <span class="link-block">
+                                    <a href="https://openaccess.thecvf.com/content/CVPR2026F/html/Mabrouk_StabiGS_Video_Stabilization_through_Rendering-Aware_Trajectory_Optimization_in_3DGS-Reconstructed_Scenes_CVPRF_2026_paper.html" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span> 
+
+                                <!-- <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span> -->
+
+                                 <span class="link-block">
+                                    <a href="https://drive.google.com/file/d/1fuw0qAza2lXgmuWhgEsRnWIpwnm8AmTN/view" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-image"></i>
+                                        </span>
+                                        <span>Poster</span>
+                                    </a>
+                                </span> 
+
+                                <span class="link-block">
+                                    <a href="https://cloud.minesparis.psl.eu/index.php/s/Ad9atjJZTPk2OaZ" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-database"></i>
+                                        </span>
+                                        <span>Synthetic Data</span>
+                                    </a>
+                                </span> 
+
+                                 <span class="link-block">
+                                    <a href="https://cloud.minesparis.psl.eu/index.php/s/WzYhfO3G1mOMFYZ" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-chart-bar"></i>
+                                        </span>
+                                        <span>Results</span>
+                                    </a>
+                                </span> 
+
+                                <span class="link-block">
+                                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code (coming soon) </span>
+                                    </a>
+                                </span>    
+
+                                 </span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
 
     <section class="hero teaser">
@@ -275,11 +355,703 @@ in 3DGS-Reconstructed Scenes</strong>
         </div>
     </section>
 
+
+    <section class="section has-background-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                        Existing video stabilization methods based on 2D warping or local 3D cues often struggle to preserve full-frame content and geometric consistency, particularly under large camera motions or complex scene geometry. We present <strong>StabiGS</strong>, a novel approach that formulates video stabilization as a rendering-aware view synthesis problem. Our method reconstructs a global 3D scene representation and jointly optimizes the camera smoothness and the rendering quality to compute the stabilized trajectory. Thus, unlike filtering-based approaches, StabiGS produces stable videos while maintaining geometric consistency. To enable a comprehensive evaluation, we present a synthetic benchmark with controllable camera shakiness and accurate ground-truth poses, enabling a reliable assessment of stabilization and rendering quality. Extensive experiments and a user study demonstrate that StabiGS achieves state-of-the-art performance in stabilization and rendering quality.   
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <section class="section">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                </div>
+            </div>
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-full panel-style">
+                    <div style="width: 100%; margin-bottom: 18px;">
+                        <div style="
+                        display: flex;
+                        gap: 10px;
+                        margin-top: 0px;
+                        margin-bottom: 14px;
+                        padding: 0;
+                        line-height: 1;
+                    ">
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; flex: 1; margin: 0;">Shaky</p>
+                        <p style="text-align: center; font-size: 20px; font-weight: bold; flex: 1; margin: 0;">StabiGS</p>
+                    </div>
+                        <div style="display: flex; gap: 10px; width: 100%; margin-top: 0; align-items: flex-start;">
+                            <video id="disentangle-video-shaky" autoplay muted loop playsinline style="width: 50%; aspect-ratio: 16/9; display: block;">
+                                <source src="static/videos/complex/forest22/shaky_fixed.mp4" type="video/mp4">
+                            </video>
+                            <video id="disentangle-video-stabigs" autoplay muted loop playsinline style="width: 50%; aspect-ratio: 16/9; display: block;">
+                                <source src="static/videos/complex/forest22/smoothed.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    
+                    <div class="thumbnail-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 24px; margin-bottom: 8px; max-width: 100%;">
+                       <img src="static/thumbs/forest22.jpg" 
+                            data-scene="forest22"
+                            class="thumbnail disentangle-video-thumbnail" alt="forest22" style="cursor: pointer; width: 100px;">
+                        
+                        <img src="static/thumbs/intense_forward.png" 
+                            data-scene="intense_forward"
+                            class="thumbnail disentangle-video-thumbnail" alt="intense_forward" style="cursor: pointer; width: 100px;">
+
+                          <img src="static/thumbs/synthetic_street.png"
+                            data-scene="synthetic_street"
+                            class="thumbnail disentangle-video-thumbnail" alt="synthetic_street" style="cursor: pointer; width: 100px;">
+
+                        <img src="static/thumbs/intense_forward2.png" 
+                            data-scene="intense_forward2"
+                            class="thumbnail disentangle-video-thumbnail" alt="intense_forward2" style="cursor: pointer; width: 100px;">
+
+                         <img src="static/thumbs/mild_rotation.png" 
+                            data-scene="mild_rotation"
+                            class="thumbnail disentangle-video-thumbnail" alt="mild_rotation" style="cursor: pointer; width: 100px;">
+
+                        <img src="static/thumbs/university2.jpg" 
+                            data-scene="university2"
+                            class="thumbnail disentangle-video-thumbnail active" alt="university2" style="cursor: pointer; width: 100px;">
+
+                        <img src="static/thumbs/mild_bush.png" 
+                            data-scene="mild_bush"
+                            class="thumbnail disentangle-video-thumbnail" alt="mild_bush" style="cursor: pointer; width: 100px;">
+                        
+                        <img src="static/thumbs/synthetic_forest.png"
+                            data-scene="synthetic_forest"
+                            class="thumbnail disentangle-video-thumbnail" alt="synthetic_forest" style="cursor: pointer; width: 100px;">
+
+                        <img src="static/thumbs/mild_walk.png" 
+                            data-scene="mild_walk"
+                            class="thumbnail disentangle-video-thumbnail" alt="mild_walk" style="cursor: pointer; width: 100px;">
+                         <img src="static/thumbs/synthetic_bistro.png"
+                            data-scene="synthetic_bistro"
+                            class="thumbnail disentangle-video-thumbnail" alt="synthetic_bistro" style="cursor: pointer; width: 100px;">
+
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-------------------------------------------->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Comparison</h2>
+                    <p style="max-width: 100%; margin: 0 auto; margin-bottom: 0px; text-align: center;">
+                        Here, we compare StabiGS with state-of-art video stabilization methods. Our method enables cinematic full-frame stabilization while preserving geometric consistency, even under intense camera motion and complex scene geometry.
+                    </p>
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <span style="margin-right: 10px; font-weight: bold; font-size: 16px;">Comparison Method:</span>
+                        <nav style="flex: 1;">
+                            <ul>
+                                <li><a id="nav1" href="javascript:void(0);" onclick="showSection('vs_shaky');setActive('nav1');">Shaky</a></li>
+                                <li><a id="nav2" href="javascript:void(0);" onclick="showSection('vs_meshflow');setActive('nav2');">Meshflow</a></li>
+                                <li><a id="nav3" href="javascript:void(0);" onclick="showSection('vs_deep3d');setActive('nav3');">Deep3D</a></li>
+                                <li><a id="nav4" href="javascript:void(0);" onclick="showSection('vs_fusta');setActive('nav4');">FuSta</a></li>
+                                <li><a id="nav5" href="javascript:void(0);" onclick="showSection('vs_difrint');setActive('nav5');">DIFRINT</a></li>
+                                <li><a id="nav6" href="javascript:void(0);" onclick="showSection('vs_gavs');setActive('nav6');">GaVS</a></li>
+                                <li><a id="nav7" href="javascript:void(0);" onclick="showSection('vs_rstab');setActive('nav7');">RStab</a></li>                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script defer src="./static/js/nav.js"></script>
+    
+
+        <section id="vs_shaky" class="section dynamic-section" style="padding-top: 1rem;">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full panel-style">
+                        <!-- <p id="compare-description" style="max-width: 90%; margin: 0 auto; margin-bottom: 0px; text-align: center;">
+                            Shaky vs StabiGS sequence (set 1).
+                        </p>
+                        <br> -->
+                        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 90%; margin: 0 auto;">
+                                <video id="compare-video" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source" src="./static/videos/intense/intense_forward/shaky.mp4" type="video/mp4">
+                                </video>
+                                <video id="compare-video-stabigs" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-stabigs" src="./static/videos/intense/intense_forward/smoothed.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-evenly; width: 90%; margin: 5px auto;">
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px;">Shaky</div>
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px;">StabiGS</div>
+                            </div>
+                           
+                        </div>
+                        <div class="thumbnail-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 0px; margin-bottom: 10px; max-width: 100%;">
+                                <img src="static/thumbs/intense_forward.png" 
+                                data-shaky="./static/videos/intense/intense_forward/shaky.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward/smoothed.mp4"
+                                data-description="Shaky vs StabiGS sequence (intense_forward)."
+                                class="thumbnail compare-thumbnail" alt="intense_forward" style="cursor: pointer; width: 100px;">
+                                <img src="static/thumbs/intense_forward2.png" 
+                                data-shaky="./static/videos/intense/intense_forward2/shaky.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward2/smoothed.mp4"
+                                data-description="Shaky vs StabiGS sequence (intense_forward2)."
+                                class="thumbnail compare-thumbnail" alt="intense_forward2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_slerp.png" 
+                            data-shaky="./static/videos/intense/intense_slerp/shaky.mp4" 
+                            data-smoothed="./static/videos/intense/intense_slerp/smoothed.mp4"
+                            data-description="Shaky vs StabiGS sequence (intense_slerp)."
+                            class="thumbnail compare-thumbnail" alt="intense_slerp" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_roadsite.png" 
+                            data-shaky="./static/videos/intense/intense_roadside/shaky.mp4" 
+                            data-smoothed="./static/videos/intense/intense_roadside/smoothed.mp4"
+                            data-description="Shaky vs StabiGS sequence (intense_roadside)."
+                            class="thumbnail compare-thumbnail" alt="intense_roadside" style="cursor: pointer; width: 100px;">
+                                <img src="static/thumbs/mild_rotation.png" 
+                                data-shaky="./static/videos/mild/mild_rotation/shaky.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation/smoothed.mp4"
+                                data-description="Shaky vs StabiGS sequence (mild_rotation)."
+                                class="thumbnail compare-thumbnail" alt="mild_rotation" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation2.png" 
+                            data-shaky="./static/videos/mild/mild_rotation2/shaky.mp4" 
+                            data-smoothed="./static/videos/mild/mild_rotation2/smoothed.mp4"
+                            data-description="Shaky vs StabiGS sequence (mild_rotation2)."
+                            class="thumbnail compare-thumbnail" alt="mild_rotation2" style="cursor: pointer; width: 100px;">
+                                <img src="static/thumbs/mild_bush.png" 
+                                data-shaky="./static/videos/mild/mild_bush/shaky.mp4" 
+                                data-smoothed="./static/videos/mild/mild_bush/smoothed.mp4"
+                                data-description="Shaky vs StabiGS sequence (mild_bush)."
+                                class="thumbnail compare-thumbnail" alt="mild_bush" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_walk.png" 
+                            data-shaky="./static/videos/mild/mild_walk/shaky.mp4" 
+                            data-smoothed="./static/videos/mild/mild_walk/smoothed.mp4"
+                            data-description="Shaky vs StabiGS sequence (mild_walk)."
+                            class="thumbnail compare-thumbnail" alt="mild_walk" style="cursor: pointer; width: 100px;">
+                        </div> 
+                </div>
+            </div>
+        </section>
+
+
+        <section id="vs_rstab" class="section dynamic-section" style="padding-top: 1rem;">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full  panel-style">
+                        <!-- <p id="compare-description-das3r" style="max-width: 90%; margin: 0 auto; margin-bottom: 0px; text-align: center;">
+                            RStab vs StabiGS sequence (set 2).
+                        </p>
+                        <br> -->
+                        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 90%; margin: 0 auto;">
+                                <video id="compare-video-das3r" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-das3r" src="./static/videos/intense/intense_forward/rstab_fixed.mp4" type="video/mp4">
+                                </video>
+                                <video id="compare-video-das3r-stabigs" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-das3r-stabigs" src="./static/videos/intense/intense_forward/smoothed.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-evenly; width: 90%; margin: 5px auto;">
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">RStab</div>
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">StabiGS</div>
+                            </div>
+                           
+                        </div>
+                        <div class="thumbnail-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 0px; margin-bottom: 10px; max-width: 100%;">
+                            <img src="static/thumbs/intense_forward.png" 
+                                data-shaky="./static/videos/intense/intense_forward/rstab_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward/smoothed.mp4"
+                                data-description="RStab vs StabiGS sequence (intense_forward)."
+                                class="thumbnail compare-thumbnail-das3r" alt="intense_forward" style="cursor: pointer; width: 100px;"> 
+                            <img src="static/thumbs/intense_forward2.png" 
+                                data-shaky="./static/videos/intense/intense_forward2/rstab_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward2/smoothed.mp4"
+                                data-description="RStab vs StabiGS sequence (intense_forward2)."
+                                class="thumbnail compare-thumbnail-das3r" alt="intense_forward2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_slerp.png" 
+                                data-shaky="./static/videos/intense/intense_slerp/rstab_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_slerp/smoothed.mp4"
+                                data-description="RStab vs StabiGS sequence (intense_slerp)."
+                                class="thumbnail compare-thumbnail-das3r" alt="intense_slerp" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_roadsite.png" 
+                                data-shaky="./static/videos/intense/intense_roadside/rstab_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_roadside/smoothed.mp4"
+                                data-description="RStab vs StabiGS sequence (intense_roadside)."
+                                class="thumbnail compare-thumbnail-das3r" alt="intense_roadside" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation.png" 
+                                data-shaky="./static/videos/mild/mild_rotation/rstab_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation/smoothed.mp4"
+                                data-description="RStab vs StabiGS sequence (mild_rotation)."
+                                class="thumbnail compare-thumbnail-das3r" alt="mild_rotation" style="cursor: pointer; width: 100px;"> 
+                            <img src="static/thumbs/mild_rotation2.png" 
+                                data-shaky="./static/videos/mild/mild_rotation2/rstab_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation2/smoothed.mp4"
+                                data-description="RStab vs StabiGS sequence (mild_rotation2)."
+                                class="thumbnail compare-thumbnail-das3r" alt="mild_rotation2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_bush.png" 
+                                data-shaky="./static/videos/mild/mild_bush/rstab_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_bush/smoothed.mp4"
+                                data-description="RStab vs StabiGS sequence (mild_bush)."
+                                class="thumbnail compare-thumbnail-das3r" alt="mild_bush" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_walk.png" 
+                                data-shaky="./static/videos/mild/mild_walk/rstab_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_walk/smoothed.mp4"
+                                data-description="RStab vs StabiGS sequence (mild_walk)."
+                                class="thumbnail compare-thumbnail-das3r" alt="mild_walk" style="cursor: pointer; width: 100px;">
+                        </div>  
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+
+        <section id="vs_deep3d" class="section dynamic-section" style="padding-top: 1rem;">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full  panel-style">
+                        <!-- <p id="compare-description-cut3r" style="max-width: 90%; margin: 0 auto; margin-bottom: 0px; text-align: center;">
+                            Deep3D vs StabiGS sequence (set 3).
+                        </p>
+                        <br> -->
+                        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 90%; margin: 0 auto;">
+                                <video id="compare-video-cut3r" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-cut3r" src="./static/videos/intense/intense_forward/deep3D_fixed.mp4" type="video/mp4">
+                                </video>
+                                <video id="compare-video-cut3r-stabigs" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-cut3r-stabigs" src="./static/videos/intense/intense_forward/smoothed.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-evenly; width: 90%; margin: 5px auto;">
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">Deep3D</div>
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">StabiGS</div>
+                            </div>
+                           
+                        </div>
+                        <div class="thumbnail-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 0px; margin-bottom: 10px; max-width: 100%;">
+                            <img src="static/thumbs/intense_forward.png" 
+                                data-shaky="./static/videos/intense/intense_forward/deep3D_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward/smoothed.mp4"
+                                data-description="Deep3D vs StabiGS sequence (intense_forward)."
+                                class="thumbnail compare-thumbnail-cut3r" alt="intense_forward" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_forward2.png" 
+                                data-shaky="./static/videos/intense/intense_forward2/deep3D_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward2/smoothed.mp4"
+                                data-description="Deep3D vs StabiGS sequence (intense_forward2)."
+                                class="thumbnail compare-thumbnail-cut3r" alt="intense_forward2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_slerp.png" 
+                                data-shaky="./static/videos/intense/intense_slerp/deep3D_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_slerp/smoothed.mp4"
+                                data-description="Deep3D vs StabiGS sequence (intense_slerp)."
+                                class="thumbnail compare-thumbnail-cut3r" alt="intense_slerp" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_roadsite.png" 
+                                data-shaky="./static/videos/intense/intense_roadside/deep3D_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_roadside/smoothed.mp4"
+                                data-description="Deep3D vs StabiGS sequence (intense_roadside)."
+                                class="thumbnail compare-thumbnail-cut3r" alt="intense_roadside" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation.png" 
+                                data-shaky="./static/videos/mild/mild_rotation/deep3D_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation/smoothed.mp4"
+                                data-description="Deep3D vs StabiGS sequence (mild_rotation)."
+                                class="thumbnail compare-thumbnail-cut3r" alt="mild_rotation" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation2.png" 
+                                data-shaky="./static/videos/mild/mild_rotation2/deep3D_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation2/smoothed.mp4"
+                                data-description="Deep3D vs StabiGS sequence (mild_rotation2)."
+                                class="thumbnail compare-thumbnail-cut3r" alt="mild_rotation2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_bush.png" 
+                                data-shaky="./static/videos/mild/mild_bush/deep3D_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_bush/smoothed.mp4"
+                                data-description="Deep3D vs StabiGS sequence (mild_bush)."
+                                class="thumbnail compare-thumbnail-cut3r" alt="mild_bush" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_walk.png" 
+                                data-shaky="./static/videos/mild/mild_walk/deep3D_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_walk/smoothed.mp4"
+                                data-description="Deep3D vs StabiGS sequence (mild_walk)."
+                                class="thumbnail compare-thumbnail-cut3r" alt="mild_walk" style="cursor: pointer; width: 100px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="vs_meshflow" class="section dynamic-section" style="padding-top: 1rem;">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full  panel-style">
+                        <!-- <p id="compare-description-meshflow" style="max-width: 90%; margin: 0 auto; margin-bottom: 0px; text-align: center;">
+                            Meshflow vs StabiGS sequence (set 4).
+                        </p>
+                        <br> -->
+                        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 90%; margin: 0 auto;">
+                                <video id="compare-video-meshflow" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-meshflow" src="./static/videos/intense/intense_forward/meshflow_fixed.mp4" type="video/mp4">
+                                </video>
+                                <video id="compare-video-meshflow-stabigs" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-meshflow-stabigs" src="./static/videos/intense/intense_forward/smoothed.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-evenly; width: 90%; margin: 5px auto;">
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">Meshflow</div>
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">StabiGS</div>
+                            </div>
+                           
+                        </div>
+                        <div class="thumbnail-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 0px; margin-bottom: 10px; max-width: 100%;">
+                            <img src="static/thumbs/intense_forward.png" 
+                                data-shaky="./static/videos/intense/intense_forward/meshflow_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward/smoothed.mp4"
+                                data-description="Meshflow vs StabiGS sequence (intense_forward)."
+                                class="thumbnail compare-thumbnail-meshflow" alt="intense_forward" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_forward2.png" 
+                                data-shaky="./static/videos/intense/intense_forward2/meshflow_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward2/smoothed.mp4"
+                                data-description="Meshflow vs StabiGS sequence (intense_forward2)."
+                                class="thumbnail compare-thumbnail-meshflow" alt="intense_forward2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_slerp.png" 
+                                data-shaky="./static/videos/intense/intense_slerp/meshflow_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_slerp/smoothed.mp4"
+                                data-description="Meshflow vs StabiGS sequence (intense_slerp)."
+                                class="thumbnail compare-thumbnail-meshflow" alt="intense_slerp" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_roadsite.png" 
+                                data-shaky="./static/videos/intense/intense_roadside/meshflow_fixed.mp4" 
+                                data-smoothed="./static/videos/intense/intense_roadside/smoothed.mp4"
+                                data-description="Meshflow vs StabiGS sequence (intense_roadside)."
+                                class="thumbnail compare-thumbnail-meshflow" alt="intense_roadside" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation.png" 
+                                data-shaky="./static/videos/mild/mild_rotation/meshflow_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation/smoothed.mp4"
+                                data-description="Meshflow vs StabiGS sequence (mild_rotation)."
+                                class="thumbnail compare-thumbnail-meshflow" alt="mild_rotation" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation2.png" 
+                                data-shaky="./static/videos/mild/mild_rotation2/meshflow_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation2/smoothed.mp4"
+                                data-description="Meshflow vs StabiGS sequence (mild_rotation2)."
+                                class="thumbnail compare-thumbnail-meshflow" alt="mild_rotation2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_bush.png" 
+                                data-shaky="./static/videos/mild/mild_bush/meshflow_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_bush/smoothed.mp4"
+                                data-description="Meshflow vs StabiGS sequence (mild_bush)."
+                                class="thumbnail compare-thumbnail-meshflow" alt="mild_bush" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_walk.png" 
+                                data-shaky="./static/videos/mild/mild_walk/meshflow_fixed.mp4" 
+                                data-smoothed="./static/videos/mild/mild_walk/smoothed.mp4"
+                                data-description="Meshflow vs StabiGS sequence (mild_walk)."
+                                class="thumbnail compare-thumbnail-meshflow" alt="mild_walk" style="cursor: pointer; width: 100px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="vs_fusta" class="section dynamic-section" style="padding-top: 1rem;">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                     <div class="column is-full  panel-style">
+                       <!-- <p id="compare-description-fusta" style="max-width: 90%; margin: 0 auto; margin-bottom: 0px; text-align: center;">
+                            FuSta vs StabiGS sequence (set 5).
+                        </p>
+                        <br>  -->
+                        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 90%; margin: 0 auto;">
+                                <video id="compare-video-fusta" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-fusta" src="./static/videos/intense/intense_forward/fusta.mp4" type="video/mp4">
+                                </video>
+                                <video id="compare-video-fusta-stabigs" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-fusta-stabigs" src="./static/videos/intense/intense_forward/smoothed.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        
+                            <div style="display: flex; justify-content: space-evenly; width: 90%; margin: 5px auto;">
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">FuSta</div>
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">StabiGS</div>
+                            </div>
+                       
+                        </div>
+                        <div class="thumbnail-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 0px; margin-bottom: 10px; max-width: 100%;">
+                            <img src="static/thumbs/intense_forward.png" 
+                                data-shaky="./static/videos/intense/intense_forward/fusta.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward/smoothed.mp4"
+                                data-description="FuSta vs StabiGS sequence (intense_forward)."
+                                class="thumbnail compare-thumbnail-fusta" alt="intense_forward" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_forward2.png" 
+                                data-shaky="./static/videos/intense/intense_forward2/fusta.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward2/smoothed.mp4"
+                                data-description="FuSta vs StabiGS sequence (intense_forward2)."
+                                class="thumbnail compare-thumbnail-fusta" alt="intense_forward2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_slerp.png" 
+                                data-shaky="./static/videos/intense/intense_slerp/fusta.mp4" 
+                                data-smoothed="./static/videos/intense/intense_slerp/smoothed.mp4"
+                                data-description="FuSta vs StabiGS sequence (intense_slerp)."
+                                class="thumbnail compare-thumbnail-fusta" alt="intense_slerp" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_roadsite.png" 
+                                data-shaky="./static/videos/intense/intense_roadside/fusta.mp4" 
+                                data-smoothed="./static/videos/intense/intense_roadside/smoothed.mp4"
+                                data-description="FuSta vs StabiGS sequence (intense_roadside)."
+                                class="thumbnail compare-thumbnail-fusta" alt="intense_roadside" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation.png" 
+                                data-shaky="./static/videos/mild/mild_rotation/fusta.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation/smoothed.mp4"
+                                data-description="FuSta vs StabiGS sequence (mild_rotation)."
+                                class="thumbnail compare-thumbnail-fusta" alt="mild_rotation" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation2.png" 
+                                data-shaky="./static/videos/mild/mild_rotation2/fusta.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation2/smoothed.mp4"
+                                data-description="FuSta vs StabiGS sequence (mild_rotation2)."
+                                class="thumbnail compare-thumbnail-fusta" alt="mild_rotation2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_bush.png" 
+                                data-shaky="./static/videos/mild/mild_bush/fusta.mp4" 
+                                data-smoothed="./static/videos/mild/mild_bush/smoothed.mp4"
+                                data-description="FuSta vs StabiGS sequence (mild_bush)."
+                                class="thumbnail compare-thumbnail-fusta" alt="mild_bush" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_walk.png" 
+                                data-shaky="./static/videos/mild/mild_walk/fusta.mp4" 
+                                data-smoothed="./static/videos/mild/mild_walk/smoothed.mp4"
+                                data-description="FuSta vs StabiGS sequence (mild_walk)."
+                                class="thumbnail compare-thumbnail-fusta" alt="mild_walk" style="cursor: pointer; width: 100px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="vs_difrint" class="section dynamic-section" style="padding-top: 1rem;">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full  panel-style">
+                        <!-- <p id="compare-description-difrint" style="max-width: 90%; margin: 0 auto; margin-bottom: 0px; text-align: center;">
+                            DIFRINT vs StabiGS sequence (set 6).
+                        </p>
+                        <br> -->
+                        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 90%; margin: 0 auto;">
+                                <video id="compare-video-difrint" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-difrint" src="./static/videos/intense/intense_forward/dfrint.mp4" type="video/mp4">
+                                </video>
+                                <video id="compare-video-difrint-stabigs" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-difrint-stabigs" src="./static/videos/intense/intense_forward/smoothed.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-evenly; width: 90%; margin: 5px auto;">
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">DIFRINT</div>
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">StabiGS</div>
+                            </div>
+                           
+                        </div>
+                        <div class="thumbnail-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 0px; margin-bottom: 10px; max-width: 100%;">
+                            <img src="static/thumbs/intense_forward.png" 
+                                data-shaky="./static/videos/intense/intense_forward/dfrint.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward/smoothed.mp4"
+                                data-description="DIFRINT vs StabiGS sequence (intense_forward)."
+                                class="thumbnail compare-thumbnail-difrint" alt="intense_forward" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_forward2.png" 
+                                data-shaky="./static/videos/intense/intense_forward2/dfrint.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward2/smoothed.mp4"
+                                data-description="DIFRINT vs StabiGS sequence (intense_forward2)."
+                                class="thumbnail compare-thumbnail-difrint" alt="intense_forward2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_slerp.png" 
+                                data-shaky="./static/videos/intense/intense_slerp/dfrint.mp4" 
+                                data-smoothed="./static/videos/intense/intense_slerp/smoothed.mp4"
+                                data-description="DIFRINT vs StabiGS sequence (intense_slerp)."
+                                class="thumbnail compare-thumbnail-difrint" alt="intense_slerp" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_roadsite.png" 
+                                data-shaky="./static/videos/intense/intense_roadside/dfrint.mp4" 
+                                data-smoothed="./static/videos/intense/intense_roadside/smoothed.mp4"
+                                data-description="DIFRINT vs StabiGS sequence (intense_roadside)."
+                                class="thumbnail compare-thumbnail-difrint" alt="intense_roadside" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation.png" 
+                                data-shaky="./static/videos/mild/mild_rotation/dfrint.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation/smoothed.mp4"
+                                data-description="DIFRINT vs StabiGS sequence (mild_rotation)."
+                                class="thumbnail compare-thumbnail-difrint" alt="mild_rotation" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation2.png" 
+                                data-shaky="./static/videos/mild/mild_rotation2/dfrint.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation2/smoothed.mp4"
+                                data-description="DIFRINT vs StabiGS sequence (mild_rotation2)."
+                                class="thumbnail compare-thumbnail-difrint" alt="mild_rotation2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_bush.png" 
+                                data-shaky="./static/videos/mild/mild_bush/dfrint.mp4" 
+                                data-smoothed="./static/videos/mild/mild_bush/smoothed.mp4"
+                                data-description="DIFRINT vs StabiGS sequence (mild_bush)."
+                                class="thumbnail compare-thumbnail-difrint" alt="mild_bush" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_walk.png" 
+                                data-shaky="./static/videos/mild/mild_walk/dfrint.mp4" 
+                                data-smoothed="./static/videos/mild/mild_walk/smoothed.mp4"
+                                data-description="DIFRINT vs StabiGS sequence (mild_walk)."
+                                class="thumbnail compare-thumbnail-difrint" alt="mild_walk" style="cursor: pointer; width: 100px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="vs_gavs" class="section dynamic-section" style="padding-top: 1rem;">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-full  panel-style">
+                        <!-- <p id="compare-description-gavs" style="max-width: 90%; margin: 0 auto; margin-bottom: 0px; text-align: center;">
+                            GaVS vs StabiGS sequence (set 7).
+                        </p>
+                        <br> -->
+                        <div style="text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; width: 90%; margin: 0 auto;">
+                                <video id="compare-video-gavs" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-gavs" src="./static/videos/intense/intense_forward/gavs.mp4" type="video/mp4">
+                                </video>
+                                <video id="compare-video-gavs-stabigs" width="45%" height="500px" preload="none" autoplay loop playsinline muted disableRemotePlayback style="pointer-events: none; margin: 0 auto; object-fit: contain; background-color: transparent;">
+                                    <source id="compare-video-source-gavs-stabigs" src="./static/videos/intense/intense_forward/smoothed.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-evenly; width: 90%; margin: 5px auto;">
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">GaVS</div>
+                                <div style="font-size: 20px; font-weight: bold; flex: 1; text-align: center; margin-bottom: 40px">StabiGS</div>
+                            </div>
+                           
+                        </div>
+                        <div class="thumbnail-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 0px; margin-bottom: 10px; max-width: 100%;">
+                            <img src="static/thumbs/intense_forward.png" 
+                                data-shaky="./static/videos/intense/intense_forward/gavs.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward/smoothed.mp4"
+                                data-description="GaVS vs StabiGS sequence (intense_forward)."
+                                class="thumbnail compare-thumbnail-gavs" alt="intense_forward" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_forward2.png" 
+                                data-shaky="./static/videos/intense/intense_forward2/gavs.mp4" 
+                                data-smoothed="./static/videos/intense/intense_forward2/smoothed.mp4"
+                                data-description="GaVS vs StabiGS sequence (intense_forward2)."
+                                class="thumbnail compare-thumbnail-gavs" alt="intense_forward2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_slerp.png" 
+                                data-shaky="./static/videos/intense/intense_slerp/gavs.mp4" 
+                                data-smoothed="./static/videos/intense/intense_slerp/smoothed.mp4"
+                                data-description="GaVS vs StabiGS sequence (intense_slerp)."
+                                class="thumbnail compare-thumbnail-gavs" alt="intense_slerp" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/intense_roadsite.png" 
+                                data-shaky="./static/videos/intense/intense_roadside/gavs.mp4" 
+                                data-smoothed="./static/videos/intense/intense_roadside/smoothed.mp4"
+                                data-description="GaVS vs StabiGS sequence (intense_roadside)."
+                                class="thumbnail compare-thumbnail-gavs" alt="intense_roadside" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation.png" 
+                                data-shaky="./static/videos/mild/mild_rotation/gavs.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation/smoothed.mp4"
+                                data-description="GaVS vs StabiGS sequence (mild_rotation)."
+                                class="thumbnail compare-thumbnail-gavs" alt="mild_rotation" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_rotation2.png" 
+                                data-shaky="./static/videos/mild/mild_rotation2/gavs.mp4" 
+                                data-smoothed="./static/videos/mild/mild_rotation2/smoothed.mp4"
+                                data-description="GaVS vs StabiGS sequence (mild_rotation2)."
+                                class="thumbnail compare-thumbnail-gavs" alt="mild_rotation2" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_bush.png" 
+                                data-shaky="./static/videos/mild/mild_bush/gavs.mp4" 
+                                data-smoothed="./static/videos/mild/mild_bush/smoothed.mp4"
+                                data-description="GaVS vs StabiGS sequence (mild_bush)."
+                                class="thumbnail compare-thumbnail-gavs" alt="mild_bush" style="cursor: pointer; width: 100px;">
+                            <img src="static/thumbs/mild_walk.png" 
+                                data-shaky="./static/videos/mild/mild_walk/gavs.mp4" 
+                                data-smoothed="./static/videos/mild/mild_walk/smoothed.mp4"
+                                data-description="GaVS vs StabiGS sequence (mild_walk)."
+                                class="thumbnail compare-thumbnail-gavs" alt="mild_walk" style="cursor: pointer; width: 100px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+<!-- ..................................... -->
+
+
+    <section class="hero teaser" style="padding-top: 0;">
+        <div class="container fluid">
+            <div class="hero-body is-max-widescreen" style="padding-top: 0;">
+                <div class="columns is-centered">
+                    <div class="column is-centered is-two-thirds">
+                        <div class="notification is-centered is-info is-rounded"
+                            style="text-align: center; padding-bottom: 5px; padding-top: 5px; background-color: #005DAC; border-radius: 10px;">
+                            <h6 class="title is-2 publication-title" style="margin-bottom:0rem; text-align: center; color:#ffffff; font-size: 20px; margin-left: auto; margin-right: auto;">
+                                Notice: This website is currently under reconstruction.
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" style="padding-top: 5rem;">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Related Work</h2>
+                    <div class="content has-text-justified">
+                        - The real-world videos are based on the following works:
+                        <li><a href="https://localrf.github.io/">Progressively Optimized Local Radiance Fields for Robust View Synthesis</a></li>
+                        <li><a href="https://sinoyou.github.io/gavs/">GaVS: 3D-Grounded Video Stabilization via Temporally-Consistent Local Reconstruction and Rendering</a></li>
+                        <li><a href="https://zhmeishi.github.io/dvs//">Deep Online Fused Video Stabilization</a></li>
+
+                        - The synthetic videos are created using <a href="https://www.blender.org/">Blender</a> and the assets are from the following works:
+                        <li><a href="https://developer.nvidia.com/orca/">NVIDIA ORCA: Open Research Content Archive</a></li>
+                        <li><a href="https://www.blenderkit.com/asset-gallery-detail/2ac89235-24d6-4786-a0df-aead0090ae3a/">Blenderkit Scene: Tropical forest</a></li>
+                        <li><a href="https://www.blenderkit.com/asset-gallery-detail/4d2355c2-a20b-4be5-a1ba-3b0217b6730e/">Blenderkit Scene: Scandinavian decoration</a></li>
+
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-justified">
+                <div class="column is-four-fifths">
+
+                    <h2 class="title">BibTeX</h2>
+                    <pre><code>
+    @InProceedings{Ben_Mabrouk_2026_CVPR,
+    author    = {Ben Mabrouk, Souheib and Deschaud, Jean-Emmanuel and Coupet\'e, Eva and Derbanne, Thomas and Rahmouni, Nicolas},
+    title     = {StabiGS: Video Stabilization through Rendering-Aware Trajectory Optimization in 3DGS-Reconstructed Scenes},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Findings},
+    month     = {June},
+    year      = {2026},
+    pages     = {8481-8491}
+    }
+                    </code></pre>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <footer class="footer" style="background-color: transparent; padding-top: 2rem; padding-bottom: 2rem;">
         <div align="center" class="container">
             <div class="columns is-centered">
                 <div class="content">
-                    Design borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a> and <a href="https://github.com/Inception3D/Easi3R">Easi3R</a>.
+                    Design borrowed from <a href="https://github.com/Inception3D/Easi3R">Easi3R</a> and <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
                 </div>
             </div>
         </div>
